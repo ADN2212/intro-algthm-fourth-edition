@@ -23,6 +23,7 @@ func (lkl *LinkedList) show() {
 	}
 }
 
+//Ver paginas 260 y 261
 //Primer algoritmo, buscar un nodo que contenga una key en una lkl
 func (lkl *LinkedList) search(k int) *Node {
 	curr := lkl.head
@@ -71,6 +72,7 @@ func (lkl *LinkedList) delete(node *Node) {
 		lkl.head = node.next
 	}
 	if node.next != nil {
+		//Si node tiene next, hacer que el prev de ese nodo sea el prev de node
 		node.next.prev = node.prev
 	}
 }

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-//Sengun mio vision
+//Sengun mi vision
 //Cada nodo de un stack solo debe saber quien esta antes de el
 type Node struct {
 	key  int
@@ -39,7 +39,7 @@ func (stk *Stack) pop() *Node {
 		stk.top = oldTop.prev
 		return oldTop
 	} else {
-		return nil//Si el metodo retorna nil significa que stack estava vacio
+		return nil//Si el metodo retorna nil significa que la stack estava vacia
 	}
 }
 
@@ -56,11 +56,7 @@ func main() {
 	stk1.push(8)
 	stk1.show()
 
-	// fmt.Println("After one pop")
-	// stk1.pop()
-	// stk1.show()
-
-	//Se puede usar el metodo pop para recorrer el stack de arriba pa bajo
+	//Se puede usar el metodo pop para recorrer el stack de arriba pa' bajo
 	curr := stk1.pop()
 	for curr != nil {
 		fmt.Println("poping ...")
